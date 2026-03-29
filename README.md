@@ -1,40 +1,49 @@
-# MBTI Personality Analysis (Singapore)
+# Comparative Study of Statistical vs Embedding-Based Models for Fake News Detection
 
 ## Overview
-This project analyzes MBTI personality types among Singaporeans using data from the 16Personalities website and Reddit. It explores personality distributions, trait patterns, and sentiment differences across the 16 MBTI types.
+This project compares traditional machine learning methods and modern deep learning approaches for fake news detection. It evaluates how different text representation techniques impact classification performance.
 
 ## Dataset
-- Source: 16Personalities (Singapore profile) & Reddit API  
-- Includes:
-  - MBTI personality types (16 types)  
-  - Trait distributions (I/E, S/N, F/T, J/P)  
-  - Role groups (Analysts, Diplomats, Sentinels, Explorers)  
-  - Reddit comments for sentiment analysis  
+- News articles labelled as **real or fake**
+- Includes textual content used for classification
 
-## Key Steps
-- Web scraping (BeautifulSoup)  
-- Data cleaning & preprocessing  
-- Feature engineering (trait aggregation & normalization)  
-- Sentiment analysis using NLTK  
-- Data visualization (charts & word clouds)  
+## Methodology
 
-## Analysis Performed
-- Distribution of MBTI types in Singapore  
-- Comparison of Singapore vs global personality traits  
-- Role group analysis (NF, NT, SJ, SP)  
-- Sentiment analysis across MBTI types using Reddit data  
-- Word frequency & word cloud analysis  
+### 1. Data Preprocessing
+- Text cleaning (lowercasing, removing punctuation, stopwords)
+- Tokenization of text data
+- Handling missing values
 
-## Insights
-- Singaporeans tend to be more Introverted, Feeling, and Perceiving  
-- Diplomats (NF types) are the most common personality group  
-- Sentiment varies across MBTI types (e.g. ESFP higher, ESTP lower)  
-- Cultural and social factors influence personality trends  
+### 2. Feature Engineering
+- **TF-IDF Vectorization** (statistical approach)
+- **Word embeddings / BERT embeddings** (deep learning approach)
 
-## Tech Stack
-Python, pandas, numpy, BeautifulSoup, NLTK, matplotlib, wordcloud, PRAW  
+### 3. Models Implemented
+- Logistic Regression (with TF-IDF)
+- BERT Classifier (embedding-based deep learning model)
 
-## Run
-```bash
-pip install pandas numpy matplotlib nltk wordcloud praw beautifulsoup4
-jupyter notebook
+## Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+## Key Findings
+- TF-IDF with Logistic Regression provides a strong baseline with fast performance
+- BERT captures deeper contextual meaning and achieves higher accuracy
+- Embedding-based models perform better on complex language patterns
+
+## Technologies Used
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- Transformers (BERT)
+- Matplotlib / Seaborn
+
+##  Project Structure
+- `notebook.ipynb` – main analysis and modelling
+- `data/` – dataset files
+- `outputs/` – results and visualizations
+
+## Conclusion
+This study highlights the trade-offs between traditional and deep learning models. While statistical models are efficient and simple, embedding-based models offer better performance for nuanced text classification tasks like fake news detection.
