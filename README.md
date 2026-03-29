@@ -1,6 +1,6 @@
-# 🧠 MBTI Personality Analysis (Singapore)
+# MBTI Personality Analysis (Singapore)
 
-## 📌 Overview
+## Overview
 This project analyzes MBTI personality types among Singaporeans using data from the 16Personalities website and Reddit. It explores personality distributions, trait patterns, and sentiment differences across the 16 MBTI types.
 
 ## Dataset
